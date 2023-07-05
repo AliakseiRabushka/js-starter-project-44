@@ -9,3 +9,5 @@ export const randomAct = () => {
 export const greeting = () => {
   console.log('Welcome to the Brain Games!');
 };
+
+export const gcd = (a, b) => (!b ? a : gcd(b, a % b));
