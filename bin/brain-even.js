@@ -1,5 +1,3 @@
-/* eslint-disable no-unused-vars */
-
-import { playEven } from '../src/even.js';
+import { playEven } from '../games/even.js';
 
 playEven();

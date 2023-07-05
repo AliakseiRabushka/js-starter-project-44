@@ -1,11 +1,10 @@
 /* eslint-disable import/prefer-default-export */
 // eslint-disable-next-line import/no-extraneous-dependencies
 import readlineSync from 'readline-sync';
-
-const random = () => Math.floor(Math.random() * 101);
+import { random, greeting } from '../src/index.js';
 
 export const playEven = () => {
-  console.log('Welcome to the Brain Games!');
+  greeting();
   const userName = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${userName}!`);
   console.log('Answer "yes" if the number is even, otherwise answer "no"');
