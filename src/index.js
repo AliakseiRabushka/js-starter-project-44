@@ -1,7 +1,5 @@
-/* eslint-disable no-undef */
-/* eslint-disable no-unused-vars */
 /* eslint-disable import/no-extraneous-dependencies */
-import readlineSync, { question } from 'readline-sync';
+import readlineSync from 'readline-sync';
 
 export const random = () => Math.floor(Math.random() * 101);
 
