@@ -1,5 +1,11 @@
 /* eslint-disable import/no-extraneous-dependencies */
-import { random, randomAct, core } from '../index.js';
+import { random, core } from '../index.js';
+
+const randomAct = () => {
+  const act = ['+', '-', '*'];
+  const randomIndex = Math.floor(Math.random() * act.length);
+  return act[randomIndex];
+};
 
 // eslint-disable-next-line import/prefer-default-export
 const gameInstruction = 'What is the result of the expression?';

@@ -1,5 +1,7 @@
 /* eslint-disable import/no-extraneous-dependencies */
-import { random, core, gcd } from '../index.js';
+import { random, core } from '../index.js';
+
+const gcd = (a, b) => (!b ? a : gcd(b, a % b));
 
 const gameInstruction = 'Find the greatest common divisor of given numbers.';
 
