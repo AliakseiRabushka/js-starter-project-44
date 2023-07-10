@@ -1,4 +1,3 @@
-/* eslint-disable import/named */
-import { playGcd } from '../games/gcd.js';
+import { playGcd } from '../src/games/gcd.js';
 
 playGcd();
