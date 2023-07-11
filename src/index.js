@@ -17,7 +17,8 @@ export const core = (instruction, getGameData) => {
       console.log('Correct!');
       count += 1;
     } else {
-      console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${data.answer}'.Let's try again, ${userName}!`);
+      console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${data.answer}'.`);
+      console.log(`Let's try again, ${userName}!`);
       return;
     }
   } console.log(`Congratulations, ${userName}!`);

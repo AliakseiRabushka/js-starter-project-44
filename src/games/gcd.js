@@ -8,7 +8,7 @@ const gameInstruction = 'Find the greatest common divisor of given numbers.';
 const getGameData = () => {
   const firstRandomInt = random();
   const secondRandomInt = random();
-  const gameQuestion = `${firstRandomInt}  ${secondRandomInt}`;
+  const gameQuestion = `${firstRandomInt} ${secondRandomInt}`;
   const gameAnswer = String(gcd(firstRandomInt, secondRandomInt));
   const data = {
     question: gameQuestion,
