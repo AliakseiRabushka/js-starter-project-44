@@ -6,7 +6,7 @@ import { random, core } from '../index.js';
 
 const isEven = (number) => number % 2 === 0;
 
-const gameInstruction = 'Answer "yes" if the number is even, otherwise answer "no"';
+const gameInstruction = 'Answer "yes" if the number is even, otherwise answer "no".';
 
 const getGameData = () => {
   const gameQuestion = random();
