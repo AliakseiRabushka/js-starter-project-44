@@ -1,3 +1,4 @@
+/* eslint-disable no-param-reassign */
 /* eslint-disable import/no-extraneous-dependencies */
 import { random, core } from '../index.js';
 
@@ -7,23 +8,25 @@ const randomAct = () => {
   return act[randomIndex];
 };
 
+const stringGameAnswer = (partAnswer, action, secondPartAnswer) => {
+  if (action === '+') {
+    partAnswer += secondPartAnswer;
+  } else if (action === '-') {
+    partAnswer -= secondPartAnswer;
+  } else if (action === '*') {
+    partAnswer *= secondPartAnswer;
+  }
+  return partAnswer;
+};
 // eslint-disable-next-line import/prefer-default-export
 const gameInstruction = 'What is the result of the expression?';
 
 const getGameData = () => {
-  const randomIntFirst = random();
-  const randomIntSecond = random();
+  const firstRandomInt = random();
+  const secondRandomInt = random();
   const randomAction = randomAct();
-  const gameQuestion = `${randomIntFirst} ${randomAction} ${randomIntSecond}`;
-  let answer = '';
-  if (randomAction === '+') {
-    answer = randomIntFirst + randomIntSecond;
-  } else if (randomAction === '-') {
-    answer = randomIntFirst - randomIntSecond;
-  } else if (randomAction === '*') {
-    answer = randomIntFirst * randomIntSecond;
-  }
-  const gameAnswer = String(answer);
+  const gameQuestion = `${firstRandomInt} ${randomAction} ${secondRandomInt}`;
+  const gameAnswer = String(stringGameAnswer(firstRandomInt, randomAction, secondRandomInt));
   const data = {
     question: gameQuestion,
     answer: gameAnswer,

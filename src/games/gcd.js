@@ -6,10 +6,10 @@ const gcd = (a, b) => (!b ? a : gcd(b, a % b));
 const gameInstruction = 'Find the greatest common divisor of given numbers.';
 
 const getGameData = () => {
-  const randomIntFirst = random();
-  const randomIntSecond = random();
-  const gameQuestion = `${randomIntFirst}  ${randomIntSecond}`;
-  const gameAnswer = String(gcd(randomIntFirst, randomIntSecond));
+  const firstRandomInt = random();
+  const secondRandomInt = random();
+  const gameQuestion = `${firstRandomInt}  ${secondRandomInt}`;
+  const gameAnswer = String(gcd(firstRandomInt, secondRandomInt));
   const data = {
     question: gameQuestion,
     answer: gameAnswer,

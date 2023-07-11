@@ -19,19 +19,15 @@ const getGameData = () => {
   const size = randomSize();
   const step = random();
   const index = randomIndex(size);
+  const startProgression = randomSize();
   // eslint-disable-next-line prefer-const
-  let progression = [];
+  let progression = [startProgression];
   for (let i = 0; progression.length <= size; i += 1) {
-    progression[0] = size;
     progression.push(progression[i] + step);
   }
   const answer = progression[index];
-  progression.splice(index, 1, '..');
-  let stringQuestion = '';
-  for (let j = 0; j <= progression.length - 1; j += 1) {
-    stringQuestion += ` ${progression[j]}`;
-  }
-  const gameQuestion = (stringQuestion);
+  progression[index] = '..';
+  const gameQuestion = (progression.join(' '));
   const gameAnswer = String(answer);
 
   const data = {

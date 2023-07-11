@@ -12,19 +12,15 @@ export const core = (instruction, getGameData) => {
   while (count <= 2) {
     const data = getGameData();
     console.log(`Question: ${data.question}`);
-    const answerUser = readlineSync.question('Your answer: ');
-    if (data.answer === answerUser) {
+    const userAnswer = readlineSync.question('Your answer: ');
+    if (data.answer === userAnswer) {
       console.log('Correct!');
       count += 1;
-      if (count === 3) {
-        console.log(`Congratulations, ${userName}!`);
-        break;
-      }
     } else {
-      console.log(`'${answerUser}' is wrong answer ;(. Correct answer was '${data.answer}'.Let's try again, ${userName}!`);
-      break;
+      console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${data.answer}'.Let's try again, ${userName}!`);
+      return;
     }
-  }
+  } console.log(`Congratulations, ${userName}!`);
 };
 
 export default core;
